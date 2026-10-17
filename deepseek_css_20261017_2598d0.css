@@ -1,0 +1,226 @@
+/* ---------- Базовые настройки ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    line-height: 1.65;
+    color: #1c1c1c;
+    background-color: #ececec;
+    margin: 0;
+    padding: 0 16px;
+
+    /* Лёгкий «шахматный» фон страницы */
+    background-image:
+        linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+        linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
+
+/* ---------- Шапка ---------- */
+header {
+    text-align: center;
+    padding: 40px 0 20px;
+    border-bottom: 4px solid #111;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.6rem;
+    color: #111;
+    margin: 0 0 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+header > p {
+    color: #555;
+    font-style: italic;
+    margin: 0 0 20px;
+}
+
+/* ---------- Навигация ---------- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 6px 14px;
+    border: 2px solid #111;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+/* ---------- Секции ---------- */
+main {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+section {
+    background: #ffffff;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    border: 2px solid #111;
+    box-shadow: 6px 6px 0 #111;
+}
+
+h2 {
+    color: #111;
+    margin-top: 0;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+}
+
+h3 {
+    color: #333;
+    margin-top: 24px;
+    border-left: 4px solid #111;
+    padding-left: 10px;
+}
+
+/* ---------- Изображение ---------- */
+img {
+    float: right;
+    margin: 0 0 12px 20px;
+    border: 4px solid #111;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0 #111;
+}
+
+#about::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ---------- Списки ---------- */
+ul, ol {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ---------- Чемпионы (article) ---------- */
+article {
+    border: 2px solid #111;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background-color: #fafafa;
+    transition: transform 0.15s;
+}
+
+article:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 #111;
+}
+
+article h3 {
+    margin-top: 0;
+    border-left: none;
+    padding-left: 0;
+}
+
+/* ---------- Цитаты ---------- */
+blockquote {
+    margin: 0 0 20px;
+    padding: 16px 20px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 4px;
+    font-style: italic;
+    position: relative;
+}
+
+blockquote::before {
+    content: "♛";
+    position: absolute;
+    top: -18px;
+    left: 16px;
+    font-size: 1.6rem;
+    color: #111;
+    background: #fff;
+    border: 2px solid #111;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+blockquote p {
+    margin: 8px 0;
+}
+
+blockquote footer {
+    text-align: right;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* ---------- Ссылки ---------- */
+a {
+    color: #111;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Подвал ---------- */
+footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    padding: 24px 0 40px;
+    border-top: 2px solid #111;
+    margin-top: 30px;
+}
+
+/* ---------- Адаптивность ---------- */
+@media (max-width: 600px) {
+    img {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    section {
+        padding: 18px 16px;
+        box-shadow: 4px 4px 0 #111;
+    }
+}
